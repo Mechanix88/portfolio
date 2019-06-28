@@ -35,6 +35,34 @@ html(lang="en")
             .welcome__wrapper
               h3.subtitle Личный сайт<br>веб разработчика
               h1.title Павлов<br>Евгений
+        section.my-works
+          .conteiner
+            h2.my-works__title Мои работы
+            .my-works__wrapper
+              +image('content/work-1.jpg', 'my-works__img')
+              .my-works__slider
+                a(href="#")
+                  +image('content/preview-work-1.jpg', 'my-works_preview-img')
+                a(href="#")
+                  +image('content/preview-work-2.jpg', 'my-works_preview-img')
+                a(href="#")
+                  +image('content/preview-work-3.jpg', 'my-works_preview-img')
+                a(href="#")
+                  +image('content/preview-work-4.jpg', 'my-works_preview-img')
+            span.slider__nubmer 2
+            .work__about
+              ul.instruments
+                li.instruments__item HTML
+                li.instruments__item CSS
+                li.instruments__item Javascript
+              h3.work__about-title Сайт школы образования
+              p.work__about-desc Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+              a(href="#").work__about-link Посмотреть сайт
+              
+
+
+
+
         .spring
           .conteiner 
             //- ОТЗЫВЫ
@@ -61,8 +89,32 @@ html(lang="en")
                       .reviews__slider-text
                         h4.h4 Владимир Сабанцев
                         .reviews__slider-desc Преподаватель
+            //- КОНТАКТЫ
             section.contacts
-              
+              h2.contacts__title Связаться со мной
+              .form__wrapper
+                form.form
+                  .form__row
+                    .form__group
+                      label.form__label(for="name") Введите ваше имя
+                      input.form__input.form__input--name(id="name" type="text" name="name" placeholder="Павлов Евгений" required)
+                    .form__group
+                      label.form__label(for="mail") Введите ваше email
+                      input.form__input.form__input--mail(id="mail" type="text" name="mail" placeholder="mechanix96@mail.ru" required)
+                  .form__row
+                    .form__group.form__group--textarea
+                      label.form__label(for="text") Сообщение к письму
+                      textarea.form__textarea.form__textarea--text(name="text") 
+                        |Требуется ваша помощь в создании сайта.
+                        |Интересуют сроки и цена вопроса
+                  button.button(type="submit") Отправить
+
+
+
+
+
+
+
 
 
         //- FOOTER

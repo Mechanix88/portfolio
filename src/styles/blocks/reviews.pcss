@@ -18,12 +18,26 @@
       opacity: 0.9;
       z-index: -1;
    }
+   &::before {
+      content: "";
+      background-image:url(./../images/content/flower.png);
+      position: absolute;
+      right: 0;
+      top: -180px;
+      display: block;
+      z-index: 1;
+      height: 442px;
+      width: 400px;
+      background-repeat: no-repeat;
+
+   }
    
 }
 
 .reviews {
    padding-top: 150px;
    z-index: 3;
+   margin-bottom: 200px;
    
 }
 
@@ -88,12 +102,15 @@
    position: relative;
    margin-right: 178px;
    &::after {
-      content: "❝" ;
-      font-size: 10em;
+      content: "" ;
+      background: svg-load('quote.svg', fill=#ffffff, width=75px, height=63px);
       position: absolute;
-      left: -105px;
-      top: -80px;
+      left: -97px;
+      top: 0;
       opacity: 0.15;
+      height: 63px;
+      width: 75px;
+      background-repeat: no-repeat;
 
    }
 }
