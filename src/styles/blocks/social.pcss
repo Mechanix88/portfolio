@@ -1,0 +1,91 @@
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* .social__icons-link {
+    padding-right: 40px;
+    &:last-child {
+        padding: 0px
+    }
+
+} */
+
+.social__icons {
+    display: flex;
+}
+
+.social__icons-link {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: block;
+    border: 1px solid #56595b;
+    border-radius: 50%;
+    margin-right: 20px;
+        &:last-child {
+        margin: 0px
+    }
+
+}
+
+.border-none {
+    border:transparent;
+}
+
+.social__icons-link--insta{
+    background: svg-load('insta.svg', fill=#56595b, width=20px, height=20px);
+    background-repeat: no-repeat;
+    background-position: center;
+&:hover {
+    background: svg-load('insta.svg', fill=#ffffff, width=20px, height=20px);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+    
+}
+
+.social__icons-link--vk{
+    background: svg-load('vk.svg', fill=#56595b, width=25px, height=25px);
+    background-repeat: no-repeat;
+    background-position: center;
+    &:hover {
+    background: svg-load('vk.svg', fill=#ffffff, width=25px, height=25px);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+    
+}
+
+.social__icons-link--github{
+    background: svg-load('github.svg', fill=#56595b, width=22px, height=20px);
+    background-repeat: no-repeat;
+    background-position: center;
+    &:hover {
+    background: svg-load('github.svg', fill=#ffffff, width=22px, height=20px);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+    
+}
+
+.insta {
+    width: 25px;
+    height: 25px;
+    fill:#706a65
+}
+
+.vk {
+    width: 31px;
+    height: 28px;
+    fill:#706a65
+}
+
+.github {
+    width: 27px;
+    height: 26px;
+    fill:#706a65
+}
+
+
