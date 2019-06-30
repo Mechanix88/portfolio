@@ -1,7 +1,6 @@
 .social {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
 }
 
 /* .social__icons-link {
@@ -14,6 +13,20 @@
 
 .social__icons {
     display: flex;
+    height: 30px;
+    width: 30px;
+    fill: #746d66;
+    &:hover{
+        fill: #ffffff;
+    }
+}
+
+.social__item {
+    margin-right: 40px;
+    cursor: pointer;
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
 .social__icons-link {
@@ -34,58 +47,11 @@
     border:transparent;
 }
 
-.social__icons-link--insta{
-    background: svg-load('insta.svg', fill=#56595b, width=20px, height=20px);
-    background-repeat: no-repeat;
-    background-position: center;
-&:hover {
-    background: svg-load('insta.svg', fill=#ffffff, width=20px, height=20px);
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+.socials--footer {
     
-}
-
-.social__icons-link--vk{
-    background: svg-load('vk.svg', fill=#56595b, width=25px, height=25px);
-    background-repeat: no-repeat;
-    background-position: center;
-    &:hover {
-    background: svg-load('vk.svg', fill=#ffffff, width=25px, height=25px);
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-    
-}
-
-.social__icons-link--github{
-    background: svg-load('github.svg', fill=#56595b, width=22px, height=20px);
-    background-repeat: no-repeat;
-    background-position: center;
-    &:hover {
-    background: svg-load('github.svg', fill=#ffffff, width=22px, height=20px);
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-    
-}
-
-.insta {
-    width: 25px;
-    height: 25px;
-    fill:#706a65
-}
-
-.vk {
-    width: 31px;
-    height: 28px;
-    fill:#706a65
-}
-
-.github {
-    width: 27px;
-    height: 26px;
-    fill:#706a65
+    border: 1px solid #746d66;
+    border-radius: 50%;
+    padding: 15px;
 }
 
 

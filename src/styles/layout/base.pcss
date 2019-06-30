@@ -30,6 +30,7 @@ body {
   margin: 0 auto;
   max-width: 1480px;
   width: 95%;
+  z-index: 10;
   
 
   @include phones {
@@ -93,10 +94,50 @@ img {
   justify-content: space-between;
 }
 
-.h4 {
+/* .h4 {
   color: #ffffff;
   font-size: 18px;
   font-weight: 700;
   line-height: 1;
   padding-bottom: 10px;
+} */
+
+.text {
+  color: $text-color;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.8;
+
+}
+
+.text-grey {
+  color: $grey-color;
+}
+
+.text-italic {
+  font-style: italic;
+  color: #7a7c7e;
+  margin-top: 100px;
+  position: relative;
+  &::before{
+    content: "*";
+    display: block;
+    color: #321d1f;
+    position: absolute;
+    left: -50px;
+    bottom: 20px;
+    font-size: 48px;
+  }
+}
+
+.title {
+  color: $text-color;
+  font-family: "Open Sans";
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.title-small {
+  font-size: 24px;
 }

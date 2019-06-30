@@ -11,9 +11,17 @@
 .my-works__title {
     color: #2d3c4e;
     font-family: "Open Sans";
-    font-size: 30px;
+    font-size: 36px;
     font-weight: 700;
+    margin-bottom: 80px;
+}
+
+.my-works__title-small {
     margin-bottom: 30px;
+    font-size: 30px;
+    color: #2d3c4e;
+    font-weight: 700;
+
 }
 
 /* .slider__number {
@@ -47,7 +55,10 @@
     bottom: 60px;
     right: 0;
     display: flex;
-    ::after{
+    -webkit-box-shadow: -1px -1px 5px 5px rgba(0,0,0,0.41);
+    -moz-box-shadow: -1px -1px 5px 5px rgba(0,0,0,0.41);
+    box-shadow: -1px -1px 5px 5px rgba(0,0,0,0.41);
+    /* ::after{
         content:"";
         position: absolute;
         height: 50%;
@@ -76,9 +87,54 @@
         cursor: pointer;
         transform: translateX(100%) rotate(180deg);
         
+    } */
+}
+
+.my-works-slider__buttons {
+    position: absolute;
+    width: 50px;
+    height: 100%;
+    right: -50px;
+    top: 0;
+    cursor: pointer;
+    /* transform: translateX(100%) rotate(180deg); */
+}
+
+.my-works-slider__buttons-next {
+    position: absolute;
+    background: svg-load('arrow-down.svg', fill=#636e7c, width=8px, height=10px);
+    background-color: #2d3c4e;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50%;
+    width: 50px;
+    &:hover{
+        background: svg-load('arrow-down.svg', fill=#ffffff, width=8px, height=10px);
+        background-color: #2d3c4e;
+        background-repeat: no-repeat;
+        background-position: center;
+
     }
 }
 
+.my-works-slider__buttons-prev {
+    position: absolute;
+    background: svg-load('arrow-down.svg', fill=#636e7c, width=8px, height=10px);
+    background-color: #2d3c4e;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50%;
+    width: 50px;
+    bottom: 0;
+    transform: rotate(180deg);
+        &:hover{
+        background: svg-load('arrow-down.svg', fill=#ffffff, width=8px, height=10px);
+        background-color: #2d3c4e;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+}
 .my-works__desc {
     color: #868e97;
     font-size: 16px;
@@ -108,6 +164,19 @@
     }
     &:hover{
         text-decoration:underline #4b6fd7;
+    }
+}
+
+.my-works_preview-img--active{
+    border: solid #f29400 3px;
+}
+
+.my-works_preview-img{
+    height: 100%;
+    &:hover{
+        border: solid #f29400 3px;
+
+
     }
 }
 

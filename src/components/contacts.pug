@@ -1,0 +1,16 @@
+h2.contacts__title.title Связаться со мной
+form.form
+    .form__row
+        .form__group
+            label.form__label(for="name") Введите ваше имя
+            input.form__input.form__input--name(id="name" type="text" name="name" placeholder="Павлов Евгений" required)
+        .form__group
+            label.form__label(for="mail") Введите ваше email
+            input.form__input.form__input--mail(id="mail" type="text" name="mail" placeholder="mechanix96@mail.ru" required)
+    .form__row
+        .form__group.form__group--textarea
+            label.form__label(for="text") Сообщение к письму
+            textarea.form__textarea.form__textarea--text(name="text") 
+                |Требуется ваша помощь в создании сайта.
+                |Интересуют сроки и цена вопроса
+    button.button(type="submit") Отправить

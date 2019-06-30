@@ -1,0 +1,17 @@
+.about-me__wrapper
+  .about-me__face
+    .about-me__img
+      +image('content/user.jpg', 'user-img')
+    .about-me__data
+      table
+        -var data = [['Проживаю:','Санкт-Петербург'],['Возраст:','23 года'],['Родился:','31 мая 1996']]
+        each row in data
+          tr
+            td.name.text.text-grey #{row[0]}
+            td.value.text #{row[1]}
+  .about-me__content
+    .about-me__welcome.text.text-grey Привет, меня зовут
+    h3.about-me__name.title Евгений Павлов
+    .about-me__text.text.text-grey
+      p Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+      p.text.text-italic  Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!

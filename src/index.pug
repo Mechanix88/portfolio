@@ -6,162 +6,37 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    title Portfolio | main page
+    title Portfolio
   body
     .wrapper
       main.main
-        section.section.welcome
+        section.section.welcome(id="main")
+          //- .layer-1
+          //- .layer-2
+          //- .layer-3
+          //- .layer-4
           .conteiner
-            //- HEADER
-            header.header
-              .logo BA
-              nav.nav
-                ul.nav__list
-                  li.nav__item
-                    a(href="#").nav__link Главная
-                  li.nav__item
-                    a(href="#").nav__link Обо мне
-                  li.nav__item
-                    a(href="#").nav__link Навыки
-                  li.nav__item
-                    a(href="#").nav__link Отзывы
-                  li.nav__item
-                    a(href="#").nav__link Связаться
-              ul.social
-                li.social__icons
-                  a(href="#").social__icons-link.social__icons-link--insta.border-none
-                  a(href="#").social__icons-link.social__icons-link--vk.border-none
-                  a(href="#").social__icons-link.social__icons-link--github.border-none
-            .welcome__wrapper
-              h3.subtitle Личный сайт<br>веб разработчика
-              h1.title Павлов<br>Евгений
-        section.section.skills
-          
-
-        section.section.my-works
-          .conteiner
-            h2.my-works__title Мои работы
-            .my-works__wrapper
-              .my-works__left
-                +image('content/work-1.jpg', 'my-works__img')
-                ul.my-works-slider
-                  li.my-works-slider__item
-                    a(href="#").my-works__slider-link
-                      +image('content/preview-work-1.jpg', 'my-works_preview-img')
-                  li.my-works-slider__item
-                    a(href="#").my-works__slider-link
-                      +image('content/preview-work-2.jpg', 'my-works_preview-img')
-                  li.my-works-slider__item
-                    a(href="#").my-works__slider-link
-                      +image('content/preview-work-3.jpg', 'my-works_preview-img')
-                  li.my-works-slider__item
-                    a(href="#").my-works__slider-link
-                      +image('content/preview-work-4.jpg', 'my-works_preview-img')
-                //- span.slider__number 2
-              .my-works__right
-                ul.my-works__instruments
-                  li.my-works__instruments-item HTML
-                  li.my-works__instruments-item CSS
-                  li.my-works__instruments-item Javascript
-                h3.my-works__title Сайт школы образования
-                p.my-works__desc Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-                a(href="#").my-works__link Посмотреть сайт
-
-
-
-
-
-        .spring
+            include components/header
+            .welcome-wrapper
+              include components/welcome
+        section.section.about-me(id="about-me")
           .conteiner 
-            //- ОТЗЫВЫ
-            section.reviews
-              .reviews__controls-wrapper
-                h2.reviews__title Что обо мне говорят
-                .reviews__control-left
-                .reviews__control-right
-              .reviews__slider
-                ul.reviews__slider-list
-                  li.reviews__slider-item
-                    p.reviews__slider-desc Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
-                    .reviews__slider-name
-                      .reviews__slider-img
-                        +image('content/reviews-avatar-1.png', 'reviews__slider-pic')
-                      .reviews__slider-text
-                        h4.h4 Ковальчук Дмитрий
-                        .reviews__slider-desc Основатель Loftschool
-                  li.reviews__slider-item
-                    p.reviews__slider-desc Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
-                    .reviews__slider-name
-                      .reviews__slider-img
-                        +image('content/reviews-avatar-2.png', 'reviews__slider-pic')
-                      .reviews__slider-text
-                        h4.h4 Владимир Сабанцев
-                        .reviews__slider-desc Преподаватель
-            //- КОНТАКТЫ
-            section.contacts
-              h2.contacts__title Связаться со мной
-              .form__wrapper
-                form.form
-                  .form__row
-                    .form__group
-                      label.form__label(for="name") Введите ваше имя
-                      input.form__input.form__input--name(id="name" type="text" name="name" placeholder="Павлов Евгений" required)
-                    .form__group
-                      label.form__label(for="mail") Введите ваше email
-                      input.form__input.form__input--mail(id="mail" type="text" name="mail" placeholder="mechanix96@mail.ru" required)
-                  .form__row
-                    .form__group.form__group--textarea
-                      label.form__label(for="text") Сообщение к письму
-                      textarea.form__textarea.form__textarea--text(name="text") 
-                        |Требуется ваша помощь в создании сайта.
-                        |Интересуют сроки и цена вопроса
-                  button.button(type="submit") Отправить
-
-
-
-
-
-
-
-
-
-        //- FOOTER
+            include components/about-me
+        section.section.skills(id="skills")
+          .conteiner
+            include components/skills
+        section.section.my-works(id="my-works")
+          .conteiner
+            include components/my-works
+        .spring
+          .conteiner
+            section.reviews(id="reviews")
+              include components/reviews
+            section.section.contacts(id="contacts")
+              include components/contacts
         footer.footer
           .conteiner.flex
-            .footer__left
-              .copy__year © 2019
-              .copy__name
-                h4.h4 Павлов <br> Евгений
-                .copy__subtitle Личный сайт <br> веб-разработчика
-            .footer__right
-              nav.nav.footer--nav
-                ul.nav__list
-                  li.nav__item
-                    a(href="#").nav__link Главная
-                  li.nav__item
-                    a(href="#").nav__link Обо мне
-                  li.nav__item
-                    a(href="#").nav__link Навыки
-                  li.nav__item
-                    a(href="#").nav__link Отзывы
-                  li.nav__item
-                    a(href="#").nav__link Связаться
-              .footer__wrapper 
-                .footer__text
-                  p.footer__desc Этот сайт я сделал в рамках обучения в <br> Школе онлайн образования Loftschool
-                  ul.social.footer--social
-                    li.social__icons
-                      a(href="#").social__icons-link.social__icons-link--insta
-                      a(href="#").social__icons-link.social__icons-link--vk
-                      a(href="#").social__icons-link.social__icons-link--github
-                .footer__quote
-                  p.footer__desc Всегда пишите код так, будто сопровождать его будет<br>склонный к насилию психопат, который знает где вы<br>живете
-                  span.footer__quote-name Martin Golding
-
-          
-
-            
-
+            include components/footer
         //- //- +image('content/user.jpg', 'user-pic')
         //- //- +icon('link', 'link-class')
         //- .icon-bg
