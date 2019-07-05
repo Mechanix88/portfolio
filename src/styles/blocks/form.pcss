@@ -1,10 +1,40 @@
-.form {
-    width: 60%;
+.contacts{
+    &::after{
+        content: "";
+        right: 0;
+        bottom: -10%;
+        background-image:url(./../images/content/flowers-2.png);
+        height: 1000px;
+        width: 500px;
+        position: absolute;
+        z-index: -1;
+        background-repeat: no-repeat;
+        @include desktop {
+        right: -10%;
+        bottom: 5%;
+
+      }
+
+    
 }
+}
+
+.form {
+    width: 75%;
+    position: relative;
+    @include tablets {
+        width: 100%;
+    }
+    }
+    
+
 
 .form__row {
     display: flex;
     width: 100%;
+   @media screen and (max-width: 500px) {
+        flex-direction: column;
+    }
 }
 
 .form__group {
@@ -12,11 +42,16 @@
     flex-direction: column;
     width: 50%;
     border: none;
-    margin-right: 50px;
+    padding-right: 50px;
     &:last-child {
-        margin-right: 0px;
+        padding-right: 0px;
     }
-}
+    @media screen and (max-width: 1024px) {
+        padding-right: 0;
+        width: 100%;
+    }
+    }
+
 
 .form__group--textarea{
     width: 100%;
@@ -86,6 +121,9 @@
     border: none;
     width: 100%;
     border-bottom:2px solid #5f6162;
+    @include phones{
+    height: 120px;
+   }
     
 }
 
@@ -114,4 +152,14 @@ input::placeholder {
     color: #ffffff;
     font-size: 36px;
     font-weight: 700;
+    @include tablets{
+        text-align: center;
+    }
+}
+
+.button__wrapper {
+    display: flex;
+    @include tablets {
+        justify-content: center;
+    }
 }

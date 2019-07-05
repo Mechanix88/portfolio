@@ -1,17 +1,33 @@
 
 .nav {
   display: flex;
-
-  
+  z-index: 99;
 
 }
+.nav--header{
+    @media screen and (max-width: 1024px) {
+    display: none;
+
+  }
+}
+
+
 
 .nav__list {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @include desktop {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  
 
 }
+.nav--vertical-menu{
+  display: flex;
+}
+
 
 .nav__item {
   padding-right: 60px;
@@ -30,4 +46,7 @@
     color: #6b6c6d;
   }
 }
+
+
+
 

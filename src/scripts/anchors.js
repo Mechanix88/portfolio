@@ -18,7 +18,7 @@ document.querySelector('.scroll-arrow').addEventListener('click', () => {
 // "слушаем" клик по пункту меню
 let anchors = ['main', 'about-me', 'skills', 'my-works', 'reviews', 'contacts']
 for (let anchor of anchors) {
-    for (let sel of document.querySelectorAll("a[href='"+anchor+"']")) {
+    for (let sel of document.querySelectorAll("a[href='#"+anchor+"']")) {
         sel.addEventListener('click', (e) => {
             e.preventDefault()
             scrollToSel('.'+anchor)

@@ -3,8 +3,13 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 650px;
     display: flex;
+    padding-top: 70px;
+    padding-bottom: 200px;
+    @include phones{
+        padding-bottom: 100px;
+        padding-top: 20px;
+    }
 }
 .about-me__wrapper {
     display: flex;
@@ -12,13 +17,23 @@
     height: 100%;
     align-items: center;
     justify-content: space-around;
+    @include phones{
+        flex-direction: column;
+    }
 }
 
 .about-me__face {
     flex-direction: column;
     display: flex;
-    min-width: 335px;
+    width: 40%;
     align-items: center;
+    margin-right: 10%;
+    @include phones{
+        margin-right: 0;
+        width: 100%;
+        margin-bottom: 40px;
+
+    }
 }
 
 .about-me__img {
@@ -42,6 +57,9 @@
 .name {
     flex: 50%;
     padding-right: 80px;
+    @include tablets{
+        padding-right: 35px;
+    }
 }
 
 .value {

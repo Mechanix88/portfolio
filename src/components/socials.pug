@@ -1,7 +1,7 @@
 mixin socials(mod)
-    ul.social
-        - var items = [{name: 'insta', href:'#'},{name: 'vk', href:'#'},{name: 'github', href:'#'}];
+    ul.social(class="social--"+ mod)
+        - var items = [{name: 'insta', href:'https://www.instagram.com/mechan1x88'},{name: 'vk', href:'https://vk.com/mechan1x'},{name: 'github', href:'https://github.com/Mechanix88'}];
         each item in items
             li.social__item(class="socials--"+ mod)
-                a(href=item.href).social__link
+                a(href=item.href).social__link(class="socials__link--"+ mod)
                     +icon(`${item.name}`, 'social__icons')

@@ -5,3 +5,7 @@ if (process.env.NODE_ENV === "development") {
 
 import "./scripts/skills";
 import "./scripts/anchors";
+import "./scripts/parallax";
+import "./scripts/burger";
+import "./scripts/mobile-popup";
+// import "./libs/flick";

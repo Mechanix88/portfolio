@@ -1,20 +1,46 @@
 .skills {
     background-image:url(./../images/content/my-skills.jpg);
-    min-height: 1021px;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     z-index: 0;
     padding-top: 150px;
+    padding-bottom: 150px;
+    @include tablets{
+    padding-bottom: 350px;
+    
+  }
+    @include phones {
+        padding-bottom: 250px;
+    }
+           
     &:after{
         content: "";
         background-image:url(./../images/content/hands.png);
         position: absolute;
-        z-index: 1;
-        left: -140px;
-        bottom: -80px;
-        height: 983px;
-        width: 682px;
+        z-index: -1;
+        left: -200px;
+        bottom: -180px;
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        @include desktop {
+            background-image:url(./../images/content/hands-1200.png);
+            left: -100px;
+            bottom: -380px;
+        }
+        @include tablets {
+            background-image:url(./../images/content/hands-720.png);
+            left: 0px;
+            bottom: 0px;
+            background-position: bottom;
+        }
+        @include phones {
+            background-image:url(./../images/content/hands-480.png);
+            left: 0px;
+            bottom: 0px;
+            background-position: bottom;
+        }
     }
 }
 
@@ -31,18 +57,22 @@
     margin: 0 auto;
 }
 
-.skills__workflow-wrapper {
-    margin-left: 40%;
-}
 
 .skills__frontend-wrapper {
-    margin-left: 40%;
     margin-bottom: 30px;
     margin-top: 90px;
+    z-index: 99;
 }
 
 .skills__svg-wrapper {
     margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+    @include tablets{
+        justify-content: center; 
+        
+    
+  }
 }
 
 
@@ -51,9 +81,14 @@
 
 .precentage{
     display: inline-block;
-    width: 170px;
-    height: 170px;
+    width: 160px;
+    height: 160px;
     transform: rotate(-180deg);
+    @include tablets{
+    width: 130px;
+    height: 130px;
+    
+  }
 }
 
 circle {

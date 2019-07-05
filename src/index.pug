@@ -1,35 +1,51 @@
 include ./mixins.pug
 
 <!DOCTYPE html>
-html(lang="en")
+html(lang="ru")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link href="/src/images/icons/favicon.png" rel="icon" type="image/x-icon" />
+    <link href="/src/libs/flick.css" rel="stylesheet">
     title Portfolio
   body
     .wrapper
+      .menu-popup
+        include components/menu-popup
+      .burger-menu
+        button.burger-menu__button
+          span.burger-menu__lines
       main.main
         section.section.welcome(id="main")
-          //- .layer-1
-          //- .layer-2
-          //- .layer-3
-          //- .layer-4
-          .conteiner
+          .parallax__layer(data-speed="0.2")
+            +image('content/bg-1.png', 'parallax__image')
+          .parallax__layer(data-speed="0.25")
+            +image('content/bg-2.png', 'parallax__image')
+          .parallax__layer(data-speed="0.4")
+            +image('content/bg-3.png', 'parallax__image')
+          .parallax__layer.gradient(data-speed="0.5")
+            +image('content/bg-4.png', 'parallax__image')
+          .scroll-wrapper
+            span.scroll Скролл
+            +icon('scroll', 'scroll-arrow')
+          
+          .container
             include components/header
             .welcome-wrapper
               include components/welcome
         section.section.about-me(id="about-me")
-          .conteiner 
+          .container 
             include components/about-me
         section.section.skills(id="skills")
-          .conteiner
+          .container
             include components/skills
         section.section.my-works(id="my-works")
-          .conteiner
+          .container
             include components/my-works
         .spring
-          .conteiner
+          .container
             section.reviews(id="reviews")
               include components/reviews
             section.section.contacts(id="contacts")
@@ -40,3 +56,4 @@ html(lang="en")
         //- //- +image('content/user.jpg', 'user-pic')
         //- //- +icon('link', 'link-class')
         //- .icon-bg
+    

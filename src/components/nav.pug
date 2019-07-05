@@ -1,6 +1,7 @@
-nav.nav
-    ul.nav__list
-        - var menu = [{name:'Главная', href:"#main"},{name:'Обо мне', href:"#about-me"},{name:'Мои навыки', href:"#skills"},{name:'Портфолио', href:"#my-works"},{name:'Отзывы', href:"#reviews"},{name:'Контакты', href:"#contacts"}]
-        each item in menu 
-            li.nav__item
-                a(href=item.href).nav__link #{item.name}
+mixin navigation(mod)   
+    nav.nav(class="nav--"+ mod)
+        ul.nav__list
+            - var menu = [{name:'Главная', href:"#main"},{name:'Обо мне', href:"#about-me"},{name:'Навыки', href:"#skills"},{name:'Работы', href:"#my-works"},{name:'Отзывы', href:"#reviews"},{name:'Связаться', href:"#contacts"}]
+            each item in menu 
+                li.nav__item
+                    a(href=item.href).nav__link #{item.name}

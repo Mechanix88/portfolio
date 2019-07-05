@@ -1,0 +1,60 @@
+.menu-popup {
+    position: fixed;
+    right: -999px;
+    top: 0;
+    width: 40%;
+    height: 100%;
+    z-index: 99;
+    transition: 1s;
+    @include phones{
+        width: 100%;
+    }
+}
+
+.menu-popup-wrapper{
+    height: 100%;
+    background: #fff;
+    z-index: 98;
+    align-items: center;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    @include phones{
+        align-items: center;
+    }
+}
+
+.mobile-popup--active {
+    right: 0;
+
+}
+
+.nav-mobile {
+    display: flex;
+    color: #414c63;
+    font-size: 18px;
+    font-weight: 600;
+
+
+
+}
+
+.nav-mobile__link{
+    text-decoration: none;
+    margin-bottom: 30px;
+    &:hover{
+        color: #6b6c6d;
+    }
+
+}
+
+.nav-mobile__list {
+    display: flex;
+    flex-direction: column;
+    padding-left: 67px;
+}
+
+.nav-mobile__item {
+    padding-bottom: 30px;
+}
