@@ -1,0 +1,25 @@
+.skills-row__title {
+  margin-bottom: 26px;
+  font-size: 24px;
+  font-weight: 700;
+  @include tablets {
+      text-align: center;
+  }
+}
+
+.skills-row__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -4%;
+  @include phones {
+    justify-content: center;
+  }
+}
+
+.skills-row__item {
+    @media screen and (max-width: 530px) {
+        display: flex;
+        justify-content: center;
+        flex-basis: 50%;
+    }
+}

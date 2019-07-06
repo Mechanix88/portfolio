@@ -7,5 +7,5 @@ import "./scripts/skills";
 import "./scripts/anchors";
 import "./scripts/parallax";
 import "./scripts/burger";
+import "./scripts/reviews";
 import "./scripts/mobile-popup";
-// import "./libs/flick";

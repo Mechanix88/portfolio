@@ -1,9 +1,10 @@
+
 import Vue from "vue";
 
 import Flickity from 'vue-flickity';
 
 new Vue({
-  el: '#reviews',
+  el: '#reviews-flickity',
   components: {
     Flickity
   },
@@ -13,7 +14,8 @@ new Vue({
       flickityOptions: {
         prevNextButtons: false,
         pageDots: false,
-        groupCells: true
+        groupCells: 2,
+        wrapAround: true
         
         // any options from Flickity can be used
       }

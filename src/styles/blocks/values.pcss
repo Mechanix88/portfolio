@@ -1,0 +1,269 @@
+.values {
+    position: relative;
+    background-image:url(./../images/content/my-skills.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 150px;
+    padding-top: 150px;
+    @include tablets {
+      padding-top: 120px;
+      padding-bottom: 120px;
+    }
+    @include phones {
+      padding-top: 100px;
+      padding-bottom: 260px;
+    }
+    &:after{
+        content: "";
+        background-image:url(./../images/content/hands.png);
+        position: absolute;
+        z-index: 0;
+        left: -200px;
+        bottom: -230px;
+        height: 115%;
+        width: 100%;
+        background-repeat: no-repeat;
+        @include desktop {
+            background-image:url(./../images/content/hands-1200.png);
+            left: -100px;
+            bottom: -200px;
+        }
+        @include tablets {
+            background-image:url(./../images/content/hands-720.png);
+            left: 0px;
+            bottom: 0px;
+            background-position: bottom;
+        }
+        @include phones {
+            background-image:url(./../images/content/hands-480.png);
+            left: 0px;
+            bottom: 0px;
+            background-position: bottom;
+        }
+  }
+}
+
+.values__container {
+  position: relative;
+}
+
+.values__wrapper {
+  position: relative;
+}
+
+.values__title {
+  margin-bottom: 82px;
+  display: flex;
+  justify-content: center;
+}
+
+.values__title-container {
+  width: 38%;
+  margin-left: 6%;
+  @include desktop {
+    width: 50%;
+    margin-left: 0;
+  }
+  @include tablets {
+    width: 68%;
+    text-align: center;
+  }
+  @include phones {
+    width: 100%;
+    margin-left: 0;
+    text-align: left;
+  }
+}
+
+.values__title-text {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 55px;
+}
+
+.values__content {
+  color: rgba($text-color, .5);
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+.values__widget {
+  display: flex;
+  justify-content: flex-end;
+  @include tablets {
+    justify-content: center;
+  }
+}
+
+.values__widget-container {
+  width: 100%;
+  @include tablets {
+    width: 95%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .skills {
+    background-image:url(./../images/content/my-skills.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    @include tablets{
+    padding-bottom: 350px;
+    
+  }
+    @include phones {
+        padding-bottom: 250px;
+    }
+           
+    &:after{
+        content: "";
+        background-image:url(./../images/content/hands.png);
+        position: absolute;
+        z-index: -1;
+        left: -200px;
+        bottom: -180px;
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        @include desktop {
+            background-image:url(./../images/content/hands-1200.png);
+            left: -100px;
+            bottom: -380px;
+        }
+        @include tablets {
+            background-image:url(./../images/content/hands-720.png);
+            left: 0px;
+            bottom: 0px;
+            background-position: bottom;
+        }
+        @include phones {
+            background-image:url(./../images/content/hands-480.png);
+            left: 0px;
+            bottom: 0px;
+            background-position: bottom;
+        }
+    }
+}
+
+.skills__title {
+    margin-bottom: 55px;
+    text-align: center;
+
+
+}
+
+.skills__text {
+    max-width: 570px;
+    text-align: left;
+    margin: 0 auto;
+}
+
+
+.skills__frontend-wrapper {
+    margin-bottom: 30px;
+    margin-top: 90px;
+    z-index: 99;
+}
+
+.skills__svg-wrapper {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+    @include tablets{
+        justify-content: center; 
+        
+    
+  }
+}
+
+
+
+
+
+.precentage{
+    display: inline-block;
+    width: 160px;
+    height: 160px;
+    transform: rotate(-180deg);
+    @include tablets{
+    width: 130px;
+    height: 130px;
+    
+  }
+}
+
+circle {
+    fill:transparent;
+    stroke-width: 2px;
+    stroke: #363636;
+}
+
+.circle__above {
+    stroke: #ed8100;
+    stroke-width: 5px;
+    stroke-dasharray: 251;
+    stroke-dashoffset: 251;
+    animation: fill 100s linear infinite;
+    animation-play-state: paused;
+
+}
+
+.circle__name {
+    transform:rotate(-180deg);
+    fill: #969493;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+@keyframes fill {
+    from {
+        stroke-dashoffset: 251
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+} */

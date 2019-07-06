@@ -6,9 +6,7 @@ html(lang="ru")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <link href="/src/images/icons/favicon.png" rel="icon" type="image/x-icon" />
-    <link href="/src/libs/flick.css" rel="stylesheet">
     title Portfolio
   body
     .wrapper
@@ -23,9 +21,9 @@ html(lang="ru")
             +image('content/bg-1.png', 'parallax__image')
           .parallax__layer(data-speed="0.25")
             +image('content/bg-2.png', 'parallax__image')
-          .parallax__layer(data-speed="0.4")
+          .parallax__layer(data-speed="0.28")
             +image('content/bg-3.png', 'parallax__image')
-          .parallax__layer.gradient(data-speed="0.5")
+          .parallax__layer.gradient(data-speed="0.32")
             +image('content/bg-4.png', 'parallax__image')
           .scroll-wrapper
             span.scroll Скролл
@@ -38,21 +36,30 @@ html(lang="ru")
         section.section.about-me(id="about-me")
           .container 
             include components/about-me
-        section.section.skills(id="skills")
-          .container
-            include components/skills
+        //- section.section.skills(id="skills")
+        section.values
+          .container.values__container
+            .values__wrapper
+              .values__title
+                .values__title-container
+                  .values__title-text Чем я могу быть полезен вам
+                  .values__content
+                    p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+            .values__widget
+              #skills-component
         section.section.my-works(id="my-works")
           .container
             include components/my-works
         .spring
           .container
-            section.reviews(id="reviews")
+            section.reviews#reviews-flickity
               include components/reviews
             section.section.contacts(id="contacts")
               include components/contacts
         footer.footer
-          .conteiner.flex
+          .container.flex
             include components/footer
+      include templates/entry
         //- //- +image('content/user.jpg', 'user-pic')
         //- //- +icon('link', 'link-class')
         //- .icon-bg
