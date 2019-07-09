@@ -10,8 +10,10 @@ form.form
     .form__row
         .form__group.form__group--textarea
             label.form__label(for="text") Сообщение к письму
-            textarea.form__textarea.form__textarea--text(name="text") 
-                |Требуется ваша помощь в создании сайта.
-                |Интересуют сроки и цена вопроса
+            //- textarea.form__textarea.form__textarea--text(name="text" id="text" placeholder="a")
+            <textarea class ="form__textarea form__textarea--text" placeholder ="Требуется ваша помощь в создании сайта.
+            |
+            |Интересуют сроки и цена вопроса"></textarea>
+
     .button__wrapper
         button.button(type="submit") Отправить
