@@ -1,0 +1,61 @@
+script(type="text/x-template")#slider-container
+    .slider
+        display(
+            :works="works",
+            :currentWork="currentWork",
+            :currentIndex="currentIndex",
+            @slide="handleSlide"
+            @thumbClick="handleThumbClick"
+        )
+        info(
+            :currentWork="currentWork"
+        )
+
+
+script(type="text/x-template")#slider-display
+    .slider__pics(:data-slide="currentIndex + 1")
+        .slider__pics-content
+            .slider__fullpic-container
+                img(:src="currentWork.photo" alt="slider").slider-pic
+                btns(
+                    @slide="direction => $emit('slide', direction)"
+                )
+                thumbs(
+                    :works="reversedWorks",
+                    :currentWork="currentWork"
+                    @thumbClick="index => $emit('thumbClick', index)"
+                )
+
+
+script(type="text/x-template")#slider-btns
+    .slider__controlls
+        button(type="button" @click.prevent=`$emit('slide','next')`).slider__controlls-left
+            +icon('arrow-down', 'arrow-left')
+
+        button(type="button" @click.prevent=`$emit('slide','prev')`).slider__controlls-right
+            +icon('arrow-down', 'arrow-right')
+
+
+script(type="text/x-template")#slider-thumbs
+    ul.slider__list
+        li.slider__item(
+            v-for="(work, index) in works" :key="work.id")
+            button(type="button" @click="$emit('thumbClick', index)")(:class="{active: currentWork.id === work.id}").slider__item-btn
+                img(:src="work.photo" alt="preview").slider__item-preview
+
+
+script(type="text/x-template")#slider-info
+    .works__right
+        tags(
+            :tagsArray="tagsArray"
+        )
+        .works__desc
+            h3.works__desc-title {{currentWork.title}}
+            p.works__desc-text {{currentWork.desc}}
+            .works__link
+                +icon('link', 'link-icon works__link-icon')
+                a.works__link-content(:href="currentWork.link" target="_blank") Посмотреть сайт
+
+script(type="text/x-template")#slider-tags
+    ul.works__desc-list
+        li.works__desc-item(v-for="tag in tagsArray") {{tag}}
