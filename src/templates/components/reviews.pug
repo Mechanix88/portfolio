@@ -1,0 +1,24 @@
+script(type="text/x-template")#reviews-list
+    section.reviews
+        .reviews__controls-wrapper
+            h2.reviews__title.title Что обо мне говорят
+            .reviews__controls
+                button(type="button").reviews__controls-prev
+                button(type="button").reviews__controls-next
+        .reviews__items
+            swiper(ref="mySwiper" :options="swiperOption")
+                comment-item(v-for="item in comments" :item="item")
+            
+script(type="text/x-template")#reviews-item
+    swiper-slide
+        .reviews__slider-item
+            .reviews__slider-wrapper
+                .reviews__quote
+                    +icon('quote', 'reviews-quote')
+                .text.text-grey {{ item.text }}
+            .reviews__slider-hero
+                .reviews__slider-img
+                    img.reviews__slider-pic(:src="item.photo")
+                .reviews__slider-text
+                    h4.reviews__slider-name {{ item.name }}
+                        .reviews__slider-desc {{ item.position }}

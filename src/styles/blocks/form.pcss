@@ -20,7 +20,7 @@
 }
 
 .form {
-    width: 75%;
+    width: 70%;
     position: relative;
     @include tablets {
         width: 100%;
@@ -32,7 +32,8 @@
 .form__row {
     display: flex;
     width: 100%;
-   @media screen and (max-width: 500px) {
+    justify-content: space-between;
+   @media screen and (max-width: 480px) {
         flex-direction: column;
     }
 }
@@ -48,6 +49,9 @@
     }
     @media screen and (max-width: 1024px) {
         padding-right: 0;
+        width: 45%;
+    }
+    @media screen and (max-width: 480px){
         width: 100%;
     }
     }
@@ -69,6 +73,10 @@
     color: #ffffff;
     font-size: 18px;
     font-weight: 700;
+    &:focus {
+        border-bottom: 2px solid #ffffff;
+
+    }
 }
 
 .form__input--name{
@@ -121,16 +129,42 @@
     border: none;
     width: 100%;
     border-bottom:2px solid #5f6162;
+    &:focus {
+        border-bottom: 2px solid #ffffff;
+
+    }
     @include phones{
     height: 120px;
    }
     
+}
+textarea::placeholder{
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    text-overflow:ellipsis;
+    @include tablets {
+        font-size: 14px;
+    }
+}
+
+
+textarea:focus::placeholder{
+    opacity: 0.3;
 }
 
 input::placeholder {
     color: #ffffff;
     font-size: 18px;
     font-weight: 700;
+    text-overflow:ellipsis;
+    @include tablets {
+        font-size: 14px;
+    }
+}
+
+input:focus::placeholder {
+    opacity: 0.3
 }
 
 .button{

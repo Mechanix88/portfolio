@@ -25,7 +25,7 @@ for (let anchor of anchors) {
         })
     }
 }
-
+// ПРивет1
 // const anchors = document.querySelectorAll('a[href*="#"]')
 
 // for(let anchor of anchors){
