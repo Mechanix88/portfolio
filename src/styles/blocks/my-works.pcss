@@ -326,6 +326,12 @@
 .slider__item {
     max-height: 100px;
     max-width: 178px;
+    z-index: 0;
+        &:hover {
+        outline: 3px solid #f29400;
+        z-index: 99;
+
+    }
     @include desktop{
     &:last-child {
         display: none;
@@ -339,6 +345,7 @@
     height: 100%;
     object-fit: cover;
     max-height: 100px;
+    z-index: 1;
 
     @include tablets() {
       object-position: left center;
@@ -347,6 +354,8 @@
 
 .slider__item-btn {
     padding: 0;
+    z-index: 0;
+
 }
 
     
@@ -355,6 +364,7 @@
     
 .active {
         outline: 3px solid #f29400;
+        z-index: 99;
     }
 
 

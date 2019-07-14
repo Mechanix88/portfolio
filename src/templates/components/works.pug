@@ -38,9 +38,9 @@ script(type="text/x-template")#slider-btns
 
 script(type="text/x-template")#slider-thumbs
     ul.slider__list
-        li.slider__item(
+        li.slider__item(:class="{active: currentWork.id === work.id}")(
             v-for="(work, index) in works" :key="work.id")
-            button(type="button" @click="$emit('thumbClick', index)")(:class="{active: currentWork.id === work.id}").slider__item-btn
+            button(type="button" @click="$emit('thumbClick', index)").slider__item-btn
                 img(:src="work.photo" alt="preview").slider__item-preview
 
 

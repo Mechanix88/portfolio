@@ -28,7 +28,6 @@ html(lang="ru")
           .scroll-wrapper
             span.scroll Скролл
             +icon('scroll', 'scroll-arrow')
-          
           .container
             include components/header
             .welcome-wrapper
@@ -36,8 +35,7 @@ html(lang="ru")
         section.section.about-me(id="about-me")
           .container 
             include components/about-me
-        //- section.section.skills(id="skills")
-        section.values
+        section.values(id="skills")
           .container.values__container
             .values__wrapper
               .values__title

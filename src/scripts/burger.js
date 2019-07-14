@@ -6,8 +6,6 @@ console.log(burger)
         burger.classList.toggle("burger-menu__active");
     });
 
-    // mobileLink.addEventListener("click",function(){
-    //     burger.classList.remove("burger-menu__active");
-    // })
+ 
 
     

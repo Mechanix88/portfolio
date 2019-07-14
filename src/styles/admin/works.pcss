@@ -1,0 +1,340 @@
+.container-works {
+    max-width: 1080px;
+    @include phones {
+        width: 100%;
+    }
+}
+
+.work-edit{
+    box-shadow: 4px 3px 20px rgba(0, 0, 0, 0.07);
+    background-color: #ffffff;
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    margin-top: 60px;
+    
+
+
+}
+
+.work-edit__wrapper {
+    display: flex;
+    margin-top: 45px;
+    @include tablets{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+}
+.work-edit__upload {
+    width: 49%;
+    height: 276px;
+    box-shadow: 4px 3px 20px rgba(0, 0, 0, 0.07);
+    border: 1px solid #a1a1a1;
+    background-color: #dee4ed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 25px;
+    @include tablets{
+       margin-right: 0;
+       margin-bottom: 100px;
+       width: 70%;
+    @include phones {
+        width: 100%;
+    }
+    }
+
+    
+}
+
+.work-edit__text{
+    text-align: center;
+    max-width: 240px;
+    opacity: 0.5;
+    color: #414c63;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 2;
+    margin-bottom: 25px;
+}
+
+.work-edit__form{
+    color: #414c63;
+    font-size: 16px;
+    font-weight: 400;
+    width: 50%;
+    @include tablets{
+        width: 70%;
+    @include phones {
+        width: 100%;
+    }
+
+        
+    }
+}
+
+.work-edit__form-row{
+    display: flex;
+    flex-direction: column;
+}
+
+.work-edit__form-label{
+    color: #414c63;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    opacity: 0.5;
+}
+
+.work-edit__form-input{
+    color: #414c63;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-bottom: 2px solid #414c63;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    width: 100%;
+
+}
+
+.work-edit__form-textarea{
+    border: 1px solid #d9dbe0;
+    resize: none;
+    min-height: 145px;
+    margin-bottom: 25px;
+}
+
+.buttons__wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.work-add {
+    margin-top: 30px;
+    @include phones {
+        margin: 0;
+    }
+}
+
+.work-add__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.add__button{
+    background-image: linear-gradient(to right, #006aed 0%, #3f35cb 100%);
+    width: calc(33% - 30px);
+    margin-bottom: 30px;
+    cursor: pointer;
+    @include tablets{
+        width: calc(50%-15px)
+        
+    }
+    @include phones{
+        width: 100%;
+        margin: 0 ;
+    }
+}
+
+.work-add__item{
+    width: calc(33%-30px);
+    margin-bottom: 30px;
+    min-height: 556px;
+    display: flex;
+    flex-direction: column;
+    align-items: space-beetwen;
+    box-shadow: 4px 3px 20px rgba(0, 0, 0, 0.07);
+    background: #fff;
+    @include tablets{
+        width: calc(50%-15px)
+        
+    }
+    @include phones {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+
+}
+
+.work-add__item-preview {
+    width: 100%;
+}
+
+.button-add-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    @include phones {
+        flex-direction: row;
+        min-height: 110px;
+    }
+}
+
+.button-circle{
+    width: 150px;
+    height: 150px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 30px;
+    cursor: pointer;
+    &:hover {
+        background-color: #fff;
+    }
+    &:hover::after {
+            color: #000;
+        }
+    @include phones {
+        width: 50px;
+        height: 50px;
+        align-items: center;
+        margin-bottom: 0;
+        margin-right: 21px;
+    }
+    &::after{
+        content: "+";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        color: #ffffff;
+        font-size: 72px;
+        font-weight: 300;
+        @include phones {
+            font-size: 24px;
+        }
+    
+
+
+    }
+}
+
+.button-add-text{
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+
+
+}
+
+.work-add__item-preview{
+    width: 100%;
+
+}
+
+.work-add__item-title{
+    color: #414c63;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 40px;
+}
+
+.work-add__item-wrapper  {
+    max-width: 280px;
+    text-align: left;
+    margin-left: 30px;
+    margin-right: 40px;
+    @include phones {
+        max-width: none;
+    }
+
+}
+
+.work-add__item-desc{
+    opacity: 0.7;
+    color: #414c63;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 25px;
+    line-height: 2;
+    margin-bottom: 30px;
+}
+
+.work-add__item-link{
+    color: #383bcf;
+    font-size: 16px;
+    font-weight: 600;
+    &:hover {
+        text-decoration:  underline ;
+    }
+}
+
+.work-add__item--buttons{
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+}
+
+.edit {
+    background: transparent;
+    color: #c4c7cf;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0;
+    position: relative;
+    padding-right: 25px;
+    &:hover {
+        color: black;
+    }
+    &:hover::after {
+        background: svg-load('pencil.svg', fill=#000, width=17px, height=17px);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &::after{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        background: svg-load('pencil.svg', fill=#383bcf, width=17px, height=17px);
+        background-repeat: no-repeat;
+        right: 0px;
+        top: 0;
+        background-size: cover;
+    }
+}
+
+.delete{
+    background: transparent;
+    color: #c4c7cf;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0;
+    position: relative;
+    padding-right: 25px;
+    &:hover {
+        color: black;
+    }
+    &:hover::after{
+        background: svg-load('remove.svg', fill=#000, width=15px, height=15px);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &::after{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background: svg-load('remove.svg', fill=#c92e2e, width=15px, height=15px);
+        background-repeat: no-repeat;
+        right: 0px;
+        top: 3px;
+        background-size: cover;
+    }
+
+}
