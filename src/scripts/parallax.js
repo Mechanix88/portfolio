@@ -19,12 +19,5 @@ window.addEventListener('scroll' , e => {
     moveLayersDependsOnScroll(wScroll);
 })
 
-// function parallaxx(e){
-//     Array.from(layers).forEach(layer => {
-//         let speed = layer.getAttribute('data-speed');
-//         layer.style.transform = `translateX(${event.clientX*speed/20}px)`
-//     })
-// }
 
-// window.addEventListener('mousemove' , parallaxx);
 

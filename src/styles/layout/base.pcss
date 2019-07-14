@@ -163,3 +163,64 @@ img {
     display: block;
 }
 }
+
+.main-content{
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  &::after {
+  content: "";
+  background-image:url(/src/images/content/admin-bg.png);
+  position: absolute;
+  opacity: 0.1;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  left:0;
+
+}
+}
+
+.admin-title{
+  color: #414c63;
+  font-size: 21px;
+  font-weight: 700;
+  @include phones {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 20px;
+  }
+}
+
+.admin-subtitle {
+  color: #414c63;
+  font-size: 18px;
+  font-weight: 700;
+  border-bottom: solid #e6e6e7 1px;
+  padding-bottom: 20px;
+
+}
+
+.button-admin {
+  background-image: linear-gradient(to right, #006aed 0%, #3f35cb 100%);
+  border-radius: 25px;
+  padding: 19px 45px 19px 45px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  &:hover {
+    background-image: linear-gradient(to right, #bb00ff 0%, #5900ff 100%);
+  }
+
+}
+
+.button-blue{
+  color: #383bcf;
+  font-size: 16px;
+  font-weight: 600;
+  background: transparent;
+  margin-right: 60px;
+}

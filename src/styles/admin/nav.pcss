@@ -1,0 +1,45 @@
+.nav{
+    background-color: $text-color;
+}
+.nav-container {
+    max-width: 1080px;
+
+}
+
+.nav__list {
+    display: flex;
+    color: #414c63;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.nav__link {
+    text-decoration: none;
+}
+
+.nav__item {
+    min-width: 125px;
+    text-align: center;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    margin-right: 25px;
+    cursor: pointer;
+    &:last-child{
+        margin-right: 0px;
+    }
+    &:hover{
+        border-bottom: 3px solid #383bcf;
+        color: #383bcf;
+
+    }
+    @include phones {
+        min-width: 0px;
+        width: 33%;
+    }
+}
+
+.nav__item--active {
+    border-bottom: 3px solid #383bcf;
+    color: #383bcf;
+}
+

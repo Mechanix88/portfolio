@@ -53,6 +53,11 @@
     display: flex;
     flex-direction: column;
     padding-left: 67px;
+    @include phones {
+        padding-left: 0;
+        align-items: flex-start;
+        text-align: left;
+    }
 }
 
 .nav-mobile__item {
